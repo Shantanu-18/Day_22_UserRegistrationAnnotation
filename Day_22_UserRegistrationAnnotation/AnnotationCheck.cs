@@ -18,12 +18,16 @@ namespace Day_22_UserRegistrationAnnotation
             string Email = Console.ReadLine();
             Console.Write("Enter Phone number: ");
             string number = Console.ReadLine();
+            Console.Write("Enter password: ");
+            string pass = Console.ReadLine();
+
 
             UserRegistration obj = new UserRegistration();
             obj.firstName = Fname;
             obj.lastName = Lname;
             obj.email = Email;
             obj.phoneNumber = number;
+            obj.password = pass;
 
             ValidationContext context = new ValidationContext(obj);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -41,7 +45,7 @@ namespace Day_22_UserRegistrationAnnotation
             {
                 Console.WriteLine("\nYour registred info is --> ");
                 Console.WriteLine($"\nFirst name : {obj.firstName} \nLast name : {obj.lastName} \nEmail : {obj.email}" +
-                    $"\nPhone number : {obj.phoneNumber}");
+                    $"\nPhone number : {obj.phoneNumber} \nPassword : {obj.password}");
             }
             Console.ReadKey();
         }
