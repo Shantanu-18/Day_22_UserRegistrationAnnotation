@@ -14,10 +14,13 @@ namespace Day_22_UserRegistrationAnnotation
             string Fname = Console.ReadLine();
             Console.Write("Enter Last name: ");
             string Lname = Console.ReadLine();
+            Console.Write("Enter email address: ");
+            string Email = Console.ReadLine();
 
             UserRegistration obj = new UserRegistration();
             obj.firstName = Fname;
             obj.lastName = Lname;
+            obj.email = Email;
 
             ValidationContext context = new ValidationContext(obj);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -34,7 +37,7 @@ namespace Day_22_UserRegistrationAnnotation
             else
             {
                 Console.WriteLine("\nYour registred info is --> ");
-                Console.WriteLine($"\nFirst name : {obj.firstName} \nLast name : {obj.lastName}");
+                Console.WriteLine($"\nFirst name : {obj.firstName} \nLast name : {obj.lastName} \nEmail : {obj.email}");
             }
             Console.ReadKey();
         }
