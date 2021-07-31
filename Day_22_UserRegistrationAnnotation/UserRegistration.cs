@@ -23,5 +23,9 @@ namespace Day_22_UserRegistrationAnnotation
         [DataType(DataType.PhoneNumber)]
         [Phone]
         public string phoneNumber { get; set; }
+
+        [StringLength(15,MinimumLength =8,ErrorMessage = "Password should be between 8 to 15 characters")]
+        [DataType(DataType.Password)]
+        public string password { get; set; }
     }
 }
