@@ -10,6 +10,14 @@ namespace Day_22_UserRegistrationAnnotation
         [Required(ErrorMessage = "Users {0} is required")]
         [StringLength(100,MinimumLength =2,ErrorMessage="Name should contain minimum two characters.")]
         [DataType(DataType.Text)]
-        public string firstName { get; set; } 
+        public string firstName { get; set; }
+
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "Name should contain minimum two characters.")]
+        [DataType(DataType.Text)]
+        public string lastName { get; set; }
+
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
+        public string email { get; set; }
     }
 }
