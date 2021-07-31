@@ -8,7 +8,8 @@ namespace Day_22_UserRegistrationAnnotation
     class UserRegistration
     {
         [Required(ErrorMessage = "Users {0} is required")]
-        [StringLength(100,MinimumLength =2,ErrorMessage="Name should contain minimum two characters.")]
+        [RegularExpression("^[A-Z][a-z]{2,}$", ErrorMessage="Name should start with capital letters and" +
+                                                                    "must have minimum 2 characters.")]
         [DataType(DataType.Text)]
         public string firstName { get; set; } 
     }

@@ -10,8 +10,11 @@ namespace Day_22_UserRegistrationAnnotation
     {
         public static void Display()
         {
+            Console.Write("Enter First name: ");
+            string Fname = Console.ReadLine();
+
             UserRegistration obj = new UserRegistration();
-            obj.firstName = "Shantanu";
+            obj.firstName = Fname;
 
             ValidationContext context = new ValidationContext(obj);
             List<ValidationResult> results = new List<ValidationResult>();

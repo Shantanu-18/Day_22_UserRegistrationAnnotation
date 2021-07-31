@@ -8,7 +8,6 @@ namespace Day_22_UserRegistrationAnnotation
         {
             Console.WriteLine("Hello Welcome to User Registration");
             AnnotationCheck.Display();
-
         }
     }
 }
