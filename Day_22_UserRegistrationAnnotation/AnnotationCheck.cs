@@ -11,7 +11,7 @@ namespace Day_22_UserRegistrationAnnotation
         public static void Display()
         {
             UserRegistration obj = new UserRegistration();
-            obj.firstName = "";
+            obj.firstName = "Shantanu";
 
             ValidationContext context = new ValidationContext(obj);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -30,7 +30,6 @@ namespace Day_22_UserRegistrationAnnotation
                 Console.WriteLine($"First name : {obj.firstName}");
             }
             Console.ReadKey();
-
         }
     }
 }
